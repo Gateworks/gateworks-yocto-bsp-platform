@@ -14,7 +14,7 @@ Download the BSP source:
 $: PATH=${PATH}:~/bin
 $: mkdir gateworks-yocto-bsp
 $: cd gateworks-yocto-bsp
-$: repo init -u https://github.com/Gateworks/gateworks-yocto-bsp-platform -b dora
+$: repo init -u https://github.com/Gateworks/gateworks-yocto-bsp-platform -b master
 $: repo sync
 
 Once this has complete, you will have all you need. To start a build, do:
@@ -37,7 +37,7 @@ Mailing list:
     https://lists.yoctoproject.org/listinfo/meta-freescale
 
 Source code:
-    
+
     https://github.com/Gateworks/gateworks-yocto-bsp-platform
 
 When creating patches, please use something like:
@@ -47,4 +47,3 @@ git format-patch -s --subject-prefix='gateworks-yocto-bsp-platform][PATCH' origi
 When sending patches, please use something like:
 
 git send-email --to support@gateworks.com <generated patch>
-
