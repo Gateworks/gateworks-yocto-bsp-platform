@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="master"/>
+  <default sync-j="4" revision="fido"/>
 
   <remote fetch="git://github.com/Gateworks" name="gateworks"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
@@ -9,19 +9,19 @@
   <remote fetch="git://github.com/Freescale" name="freescale"/>
 
   <!-- Upstream Yocto & OpenEmbedded Projects -->
-  <project remote="yocto" revision="master" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="fido" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="fido" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
 
-  <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="fido" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <!-- Community Freescale Repo's -->
-  <project remote="freescale" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="master" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="freescale" revision="fido" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="fido" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
   <!-- Gateworks meta layer & setup scripts -->
-  <project remote="gateworks" revision="master" name="meta-gateworks" path="sources/meta-gateworks"/>
+  <project remote="gateworks" revision="fido" name="meta-gateworks" path="sources/meta-gateworks"/>
 
-  <project remote="gateworks" revision="master" name="gateworks-yocto-bsp-base" path="sources/base">
+  <project remote="gateworks" revision="fido" name="gateworks-yocto-bsp-base" path="sources/base">
     <copyfile dest="README" src="README"/>
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
