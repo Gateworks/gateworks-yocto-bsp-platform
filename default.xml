@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="daisy"/>
+  <default sync-j="4" revision="fido"/>
 
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://github.com/Gateworks" name="gateworks"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://github.com/Freescale" name="freescale"/>
 
-  <project remote="yocto" revision="daisy" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="daisy" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <!-- Upstream Yocto & OpenEmbedded Projects -->
+  <project remote="yocto" revision="fido" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="fido" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
 
-  <project remote="oe" revision="daisy" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="fido" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="gateworks" revision="daisy" name="gateworks-yocto-bsp-base" path="sources/base">
-	<copyfile dest="README" src="README"/>
-	<copyfile dest="setup-environment" src="setup-environment"/>
+  <!-- Community Freescale Repo's -->
+  <project remote="freescale" revision="fido" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="fido" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+
+  <!-- Gateworks meta layer & setup scripts -->
+  <project remote="gateworks" revision="fido" name="meta-gateworks" path="sources/meta-gateworks"/>
+
+  <project remote="gateworks" revision="fido" name="gateworks-yocto-bsp-base" path="sources/base">
+    <copyfile dest="README" src="README"/>
+    <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
-
-  <project remote="freescale" revision="daisy" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="daisy" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
-
-  <project remote="gateworks" revision="daisy" name="meta-gateworks" path="sources/meta-gateworks"/>
 
 </manifest>
