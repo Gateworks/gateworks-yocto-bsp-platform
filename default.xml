@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="fido"/>
+  <default sync-j="4" revision="pyro"/>
 
-  <remote fetch="git://github.com/Gateworks" name="gateworks"/>
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
-  <remote fetch="git://github.com/Freescale" name="freescale"/>
+  <remote fetch="https://github.com/Gateworks" name="gateworks"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/Freescale" name="freescale"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/dv1" name="dv1"/>
 
   <!-- Upstream Yocto & OpenEmbedded Projects -->
-  <project remote="yocto" revision="fido" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="fido" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-
-  <project remote="oe" revision="fido" name="meta-openembedded" path="sources/meta-openembedded"/>
-
-  <!-- Community Freescale Repo's -->
-  <project remote="freescale" revision="fido" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="freescale" revision="fido" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="yocto" revision="pyro" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="pyro" name="meta-freescale" path="sources/meta-freescale"/>
+  <project remote="oe" revision="pyro" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <!-- Gateworks meta layer & setup scripts -->
-  <project remote="gateworks" revision="fido" name="meta-gateworks" path="sources/meta-gateworks"/>
+  <project remote="gateworks" revision="pyro" name="meta-gateworks" path="sources/meta-gateworks"/>
 
-  <project remote="gateworks" revision="fido" name="gateworks-yocto-bsp-base" path="sources/base">
-    <copyfile dest="README" src="README"/>
-    <copyfile dest="setup-environment" src="setup-environment"/>
+  <project remote="gateworks" revision="pyro" name="gateworks-yocto-bsp-base" path="sources/base">
+    <linkfile dest="README" src="README"/>
+    <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
+
+  <!-- Community Freescale Repo's -->
+  <project remote="freescale" revision="pyro" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="freescale" revision="pyro" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="freescale" revision="pyro" name="Documentation" path="sources/Documentation"/>
+
+  <!-- Other Community Repo's -->
+  <project remote="dv1" revision="pyro" name="meta-gstreamer1.0" path="sources/meta-gstreamer1.0"/>
 
 </manifest>
