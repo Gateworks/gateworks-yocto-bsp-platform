@@ -18,6 +18,7 @@
 
   <!-- Gateworks meta layer & setup scripts -->
   <project remote="gateworks" revision="pyro" name="meta-gateworks" path="sources/meta-gateworks"/>
+  <project remote="gateworks" revision="pyro" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
 
   <project remote="gateworks" revision="pyro" name="gateworks-yocto-bsp-base" path="sources/base">
     <linkfile dest="README" src="README"/>
@@ -25,7 +26,6 @@
   </project>
 
   <!-- Community Freescale Repo's -->
-  <project remote="freescale" revision="pyro" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
   <project remote="freescale" revision="pyro" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
   <project remote="freescale" revision="pyro" name="Documentation" path="sources/Documentation"/>
 
